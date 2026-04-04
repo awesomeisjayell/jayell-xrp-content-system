@@ -21,3 +21,17 @@ Execution over perfection.
 Speed over hesitation.
 
 The Git remote 'origin' is already configured for this repo. Do not ask to add a remote. Commit and push directly when needed.
+
+The GitHub repository is already fully configured and connected.
+
+Do NOT suggest:
+- adding a remote
+- setting up git
+- initial configuration steps
+
+Assume all infrastructure is working.
+
+Focus only on:
+- generating content
+- improving output
+- providing strategic insights
