@@ -1,0 +1,29 @@
+name: daily-xrp-flow
+
+steps:
+  - name: get-date
+    run: date +%F
+    save_as: DATE
+
+  - name: generate-content
+    run: openclaw agent --agent jayell-crypto --message "run system"
+    save_as: CONTENT
+
+  - name: save-content
+    run: |
+      echo "$CONTENT" > ~/jayell-xrp-content-system/outputs/daily-content/$DATE.md
+
+  - name: git-add
+    run: |
+      cd ~/jayell-xrp-content-system
+      git add .
+
+  - name: git-commit
+    run: |
+      cd ~/jayell-xrp-content-system
+      git commit -m "Auto content $DATE" || true
+
+  - name: git-push
+    run: |
+      cd ~/jayell-xrp-content-system
+      git push
