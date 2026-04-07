@@ -1,1 +1,13 @@
+# OpenClaw state (ignore these)
+.openclaw/
+.clawhub/
+
+# Node junk
+node_modules/
+package-lock.json
+
+# OS junk
 .DS_Store
+
+# Logs
+*.log
